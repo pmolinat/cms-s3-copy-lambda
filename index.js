@@ -13,12 +13,14 @@ const copyFile = (event) => {
     const destinationBucket = event.destinationBucket;
     const fileKey = event.fileKey;
     const destinationKey = event?.destinationKey || fileKey;
+    const defaultACL = 'public-read';
 
     // Copying the object from source bucket to destination bucket
     const copyParams = {
         CopySource: `${sourceBucket}/${fileKey}`,  // Source format: /bucket-name/key
         Bucket: destinationBucket,  // Destination bucket
         Key: destinationKey,  // The destination key (same or different as needed)
+        ACL: defaultACL,  // Configure ACL of newly copied object
     };
 
     // Execute the copy command
