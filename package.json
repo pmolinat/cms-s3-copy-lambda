@@ -1,0 +1,23 @@
+{
+  "name": "cms-s3-copy",
+  "version": "1.0.0",
+  "description": "Helper function to migrate files async in between S3 locations",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "npm run jest"
+  },
+  "keywords": [
+    "cmd",
+    "migration",
+    "legacy",
+    "migration",
+    "AWS",
+    "S3"
+  ],
+  "author": "Pablo Molina",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.664.0"
+  }
+}
